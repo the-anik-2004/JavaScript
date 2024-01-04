@@ -8,7 +8,7 @@ let variable;
 
 console.table([typeof name,typeof age,typeof isVerified,typeof container,typeof variable]);
 /*
-
+============NOTES=============
 *number =>2^53
 
 *bigint
