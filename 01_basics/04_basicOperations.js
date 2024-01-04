@@ -17,9 +17,8 @@ console.log(1+2+"2");//==>If number is the first element then number ADDITION wi
 
 
 /**===pre-increment  post-increment ===*/
-/**
- * let i=0;
+ let i=0;
 // val=i++;  val<=0 -- i<=1
-// val=++i; val<=1 -- i<=1
+val=++i; //val<=1 -- i<=1
 console.log(val);
- */
+ 
