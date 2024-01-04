@@ -5,6 +5,11 @@
 // let score=undefined;  ==>here coversion is succesfully happening but the value is NaN(Not a Number)
 // let score=true;  ==>here coversion is succesfully happening and the value is 1(true) 0(false)
 
+let bigNumber=42354647657346343323254357657n;
+console.log(typeof bigNumber);
+console.log(bigNumber);
+console.log();
+
 /*
 console.log("Datatype of 'score' :"+typeof(score));
 console.log("Value of 'score' :"+score);
