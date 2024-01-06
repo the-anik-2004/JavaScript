@@ -27,6 +27,7 @@ const uniArr=mixedArr.flat(4);//===>Returns a new array with all sub-array eleme
 /** ++++Checking Array and maikng Array++++ */
 console.log(Array.isArray("anikArr"));
 console.log(Array.from("anikArr")); //you can make anytype to array
+console.log(Array.from([1,2,3,4,5,7,8,9,10],(x)=>x*2))
 
 let ele1=11;
 let ele2=22;
