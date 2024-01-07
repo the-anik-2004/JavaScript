@@ -21,12 +21,46 @@ const myObj={
  *,age->"age" , location->"location" etc.
  */
 
-console.log(myObj.location);   
-  //==>Not Preferable way to access
-console.log(myObj["location"]); 
+ /**++++++Accessing Objects++++++*/
+// console.log(myObj.location);   
+  //==>It is most used accessing but Not Preferable way to access,when there is a space in the key name
+// console.log(myObj["location"]); 
  //==>Preferable way to access.REMEMBER-here we have to give STRING as parameters.For Eg:-
- console.log(myObj["full name"]);//==>if there is space in a key name,[] is preferrrable,(.) access is not preferable.
+//  console.log(myObj["full name"]);
+ //==>if there is space in a key name,[] is preferrrable,(.) access is not preferable.
+
+//  console.log(myObj[sym]);
+ //==>Accessing Symbolsss
+//  console.log(sym);
+//  console.log(typeof sym);
+
+  /**++++++Object Modification++++++*/
+
+// myObj.email="codespaceofanik@gmail.com";
+// myObj["name"]="ROHAN";
+// myObj["full name"]="ANIK PAL";
+// //==>Modification by [] square operator
+// console.log(myObj);
+
+// /*NOTES:-
+//     we can restrict a object from modification
+// by using : Object.freeze(obj_name) .So that no one can
+// modify that Object*/
+
+// Object.freeze(myObj); //==>Now no change is applicable
+// myObj["lastLoggedIn"]=['SAT','SUN'];
+// console.log(myObj);
 
 
- console.log(myObj[sym]);
- console.log([sym]);
+/**++++++++Object Function+++++++++ */
+myObj.greeting=()=>{
+    console.log("Hi there");
+}
+
+
+
+myObj.greetingTwo=function(){
+    console.log(`Hi there ${this.name}`);
+}
+myObj.greeting();
+myObj.greetingTwo()
