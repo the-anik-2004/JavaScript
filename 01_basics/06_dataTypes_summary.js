@@ -12,7 +12,20 @@ let userEmail;
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
-console.log(id === anotherId);
+console.log(id === anotherId); //=>though the value is same still they are unique.
+//SYMBOL USE-CASE:-symbols are use as the keys of object.
+/*
+  SYNTAX: 
+  const symbol_variable=Symbol("It is a symbol");
+
+  const obj={
+     [symbol_variable]:value,
+  };
+
+  console.log(obj[symbol_variable])
+
+ */
+obj
 
 // const bigNumber = 3456543576654356754n
 

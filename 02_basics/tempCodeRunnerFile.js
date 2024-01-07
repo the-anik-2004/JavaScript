@@ -1,1 +1,1 @@
-
+console.log(myObj.location);   

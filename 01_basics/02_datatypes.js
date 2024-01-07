@@ -11,7 +11,7 @@ console.table([typeof name,typeof age,typeof isVerified,typeof container,typeof 
 ============NOTES=============
 *number =>2^53
 
-*bigint
+*BigInt=>return type :bigint
 
 *string=>""
 
@@ -22,7 +22,7 @@ and it is a object type.
 
 *undefined=>Value is not defined yet.It is undefined type.
 
-*symbol=>It defines uniqueness .
+*symbol=> A Symbol is a unique and immutable primitive value and may be used as the key of an Object property .return type symbol.
 
 *object
 */
