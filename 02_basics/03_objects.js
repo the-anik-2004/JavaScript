@@ -1,7 +1,4 @@
-//singleton ==>When a object is made by a consturtor...
-
 //object literals
-
 
 //creating a symbol.
 const sym=Symbol('key1');
