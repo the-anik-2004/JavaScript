@@ -41,8 +41,40 @@ The Object.assign() static method copies all enumerable own properties from one 
 
 //++++Objects Keys & values+++
 
-console.log(appUser);
-console.log(Object.keys(appUser));
-console.log(Object.values(appUser));
-console.log(Object.entries(appUser));
-console.log(appUser.hasOwnProperty('isLoggedIn'));//==>Chceking The property
+// console.log(appUser);
+// console.log(Object.keys(appUser));
+// console.log(Object.values(appUser));
+// console.log(Object.entries(appUser));
+// console.log(appUser.hasOwnProperty('isLoggedIn'));//==>Chceking The property
+
+
+
+/*+++++++++++++Object Destructure+++++++++++++*/
+
+const car={
+    brand:"BMW",
+    model:"X1",
+    price:5000000
+};
+
+const {brand} =car;
+const {model : m}=car;
+/*SYNTAX:-
+     const{object_element : ele}=Object_name;
+     console.log(ele) */
+
+console.log(brand);
+console.log(m);
+
+/*++++++++++++++++JSON+++++++++++++*/
+/**
+ It is nothing but a Object which does not have a name and where
+ all the keys are in String.
+ eg:-
+    {
+        "Name":"Anik Pal",
+        "roll":62,
+        "isLoggedIn":true,
+    } 
+ */
+
