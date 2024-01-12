@@ -13,7 +13,9 @@ for(const greet of greeting){
 
 }
 
-//maps
+
+//++++++++++forof in maps+++++++++
+
 const map=new Map();
 map.set('IN',"India");
 map.set('USA',"United States of America");
@@ -32,7 +34,25 @@ for(const [key,value] of map){
     console.log(key+" :- "+value);
 }
 
+
+/*
+
+//++++++++++++forof in object++++++++++
+const progObj={
+    js:"javacript",
+    java:"java",
+    cpp:"C++",
+    swift:"Swift",
+    py:"Python"
+}
+
+for (const itr of progObj) {
+    console.log(itr)
+}
+*/
 /*
 NOTES:-
-    if as Maps are iterable so there is a speacial syantax to itertae a map using
-    square brackets[] in for-of loop */
+    1. if as Maps are iterable so there is a speacial syantax to itertae a map using
+    square brackets[] in for-of loop 
+    
+    2.for of loops in not applicable in objects*/
