@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-3</title>
+    <style>
+        body{
+            font-size:x-large;
+            background-color: #212121;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        const tag=document.createElement('div');
+        tag.className="main";
+        tag.id=Math.floor(Math.random()*(10-5+1) +5);
+        tag.setAttribute("style",'color:yellow');
+
+        // tag.innerText="Hello Brother";//==>It is not an efficient way to add a text. because it fetchs the text and override the existing value with new value.
+       
+        const msg= document.createTextNode("Hello Developer Bhai👋");
+        tag.appendChild(msg);
+        console.log(tag);
+
+        //appending the created tag in body
+        document.body.appendChild(tag);
+    </script>
+ </body>
+</html>

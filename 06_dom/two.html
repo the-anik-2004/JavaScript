@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-2</title>
+    <style>
+        body{
+            font-size:x-large;
+            background-color: #212121;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="week">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+        <div class="day">Sunday</div>
+    </div>
+
+    <script>
+        const week=document.querySelector(".week");
+        const day=document.querySelector(".day");
+        // console.log(week);
+        // console.log(week.children);//==>It returens HTMLCollections
+        // console.log(week.children[6].innerText);
+
+        for(let i=0;i<week.children.length;i++){
+            console.log(week.children[i].innerHTML);
+        }
+
+        // week.children[0].style.color="violet";
+        const startDay=week.firstChild;
+        const dayColor=['violet','blue','skyblue','green','yellow','orange','red'];
+       
+        for (let i = 0; i < week.children.length; i++) {
+            week.children[i].style.color=dayColor[i];
+            
+        }
+
+        /*=========PARENT CHILD RELATION===========*/
+        // console.log(week.firstElementChild);//==>Accessing the First child through parent class
+        // console.log(week.lastElementChild);//==>Accessing the Last child through parent class
+        // console.log(day.parentElement);//==>Accessing the Parent class through Child class
+        // console.log(day.nextElementSibling);//==>Accessing the next sibling nodes
+
+        console.log("NODES: ",week.childNodes);
+    </script>
+</body>
+</html>
