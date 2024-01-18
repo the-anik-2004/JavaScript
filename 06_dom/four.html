@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - 4</title>
+    <style>
+        body{
+            background-color: #000;
+            color: #fff;
+        }
+        .li-item{
+            color:red;
+        }
+        .opti-li-item{
+            color:red;
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="language">
+       
+    </ul>
+
+    <script>
+        //NOTES:- this function is usefull for  small scale...because when you add more elements eg-100000,it has to traverse that much times...so it is not preferable for large scale applications.
+        function addLanguage(langName,color){
+            const li=document.createElement('li');
+            li.className="li-item";
+            li.setAttribute("style",`color:${color}`);
+            li.innerHTML=`${langName}`;
+            document.querySelector(".language").appendChild(li);
+        }
+
+        addLanguage("JavaScript","orange");
+        addLanguage("Java","Skyblue");
+        addLanguage("Python","green");
+        addLanguage("Rust")
+
+
+        function addOptiLang(langName,color){
+            const li=document.createElement('li');
+            li.setAttribute("style",`color:${color}`);
+            li.className="opti-li-item";
+            li.appendChild(document.createTextNode(langName));
+
+            document.querySelector('.language').appendChild(li);
+        }
+        addOptiLang("TypeScript","yellow");
+
+
+        //=========Editing the values========
+
+        //|1|
+        const secondLang =document.querySelector("li:nth-child(3)");
+        // secondLang.innerText="C++";//==>Approach 1
+       const newLi =document.createElement('li')
+       newLi.textContent="bhaiLang";
+
+       secondLang.replaceWith(newLi);//==>replace the value
+
+//|2|
+const firstLang =document.querySelector("li:first-child");
+firstLang.outerHTML=`<li>MERN STACK</li>`
+
+//=====Removing Elements=========
+const rmvEle =document.querySelector("li:nth-child(3)");
+rmvEle.remove();
+
+    </script>
+</body>
+</html>
