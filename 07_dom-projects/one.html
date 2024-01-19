@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <style>
+        .main{
+            margin-top: 4%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* color: black; */
+        }
+        .canvas{
+         
+            display: flex;
+            
+        }
+        .button{
+            margin:4px;
+            height: 90px;
+            width: 90px;
+            border: 2px solid black;
+        }
+
+        #grey{
+            background-color: grey;
+        }
+        #white{
+            background-color: white;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #black{
+            background-color: black;
+        }
+        .lower-text{
+            font-weight: 900;
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1 class="upper-text">Color Scheme Switcher</h1>
+       <div class="canvas">
+    <span class="button" id="grey"></span>
+    <span class="button" id="white"></span>
+    <span class="button" id="blue"></span>
+    <span class="button" id="yellow"></span>
+    <span class="button" id="black"></span>
+       </div>
+        <span class="lower-text">Try clicking on the colors above to change the background of this page</span>
+
+        <script src="one.js"></script>
+    </div>
+</body>
+</html>
