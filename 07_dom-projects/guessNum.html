@@ -28,9 +28,12 @@
         }
         h1{margin-bottom: 2%;}
         form{
-            margin-top:10%;
+            margin-top:4%;
             display: flex;
             flex-direction: column;
+            border-radius: 5px;
+            box-shadow: 0 0 4px white;
+            padding: 1%;
         }
         #inp-num{
             margin-top: 2%;
@@ -50,8 +53,12 @@
             box-shadow:inset 0 0 4px rgb(8, 8, 8);
         }
         .info{
+            /* background-color: #fff; */
+            border-radius: 5px;
+            box-shadow: 0 0 4px white;
+            padding: 1%;
             width: 250px;
-            margin-top: 8%;
+            margin-top: 2%;
             display: flex;
             flex-direction: column;
             align-items: start;
@@ -60,6 +67,35 @@
           
             line-height: 30px;
         
+        }
+        .new-game{
+            text-align: center;
+            padding:4%;
+            border-radius: 15px;
+            background-color: green;
+            color: white;
+        }
+        .progress{
+            text-align: center;
+            padding:4%;
+            border-radius: 15px;
+            background-color: rgb(211, 247, 9);
+            color: rgb(5, 5, 5);
+            display:none;
+        }
+        .guess{
+            padding:2% ;
+            background-color:grey;
+        }
+        @media screen and (max-width:491px) {
+           form{
+            padding: 4%;
+            margin-top: 10%;
+           } 
+        }
+        .info{
+            padding: 4%;
+            margin-top: 10%;
         }
     </style>
 </head>
@@ -77,12 +113,16 @@
         <section class="info">
             <p>Previous Guess:<span class="guess"></span></p>
             <p>Guesses Remaining:<span class="remain">10</span></p>
+            <p class="progress"></p>
+            
         </section>
     
     
     </section>
     
     
-    <script src="guessNum.js"></script>
+    <!-- <script src="guessNum.js"></script> -->
+
+    <script src="GuessTheNum.js"></script>
 </body>
 </html>
