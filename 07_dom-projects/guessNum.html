@@ -12,10 +12,12 @@
           
         }
         body{
-            height: 100vh;
+            height: 100%;
             width: 100vw;
             background-color: #212121;
             color: #fff;
+            overflow-y: scroll;
+            overflow-x: hidden;
         }
         .main{
             
@@ -24,7 +26,7 @@
          /* background-color: #fff; */
          flex-direction: column;
          align-items: center;
-         padding: 4% 0 0 ;
+         padding: 2% 0 0 ;
         }
         h1{margin-bottom: 2%;}
         form{
@@ -40,7 +42,7 @@
             padding: 4%;
         }
         #check-btn{
-            margin-top: 8%;
+            margin-top: 4%;
             padding: 4%;
             background-color:#000;
             color: inherit;
@@ -56,23 +58,20 @@
             /* background-color: #fff; */
             border-radius: 5px;
             box-shadow: 0 0 4px white;
-            padding: 1%;
             width: 250px;
-            margin-top: 2%;
+            margin: 4%;
             display: flex;
             flex-direction: column;
             align-items: start;
         }
-        .info>p{
-          
-            line-height: 30px;
-        
-        }
+       
         .new-game{
+            width: 200px;
+            margin: 2% ;
             text-align: center;
-            padding:4%;
+            padding:2%;
             border-radius: 15px;
-            background-color: green;
+            background-color: dodgerblue;
             color: white;
         }
         .progress{
@@ -96,6 +95,15 @@
         .info{
             padding: 4%;
             margin-top: 10%;
+            
+        }
+
+        .new-game{
+            width: 150px;
+            margin: 4%;
+            text-align: center;
+            padding:4%;
+            border-radius: 15px;
         }
     </style>
 </head>
