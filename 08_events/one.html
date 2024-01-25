@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events -1</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <ul id="images">
+        <li><img id="one" width="200px" src="./images/one.png" alt="1"></li>
+        <li><img id="two" width="200px" src="./images/switzerland_perfect.jpg" alt="2" "></li>
+        <li><img id="three" width="200px" src="./images/two.png" alt="3"></li>
+        <li><img id="four" width="200px" src="./images/WhatsApp Image 2023-05-01 at 14.45.26.jpg" alt=""4></li>
+        <li ><a id="google" style="color: aliceblue;" href="www.google.com" >Google</a></li>
+    </ul>
+
+</body>
+<script>
+    /*==You can use it but it is not the approach to implement Onclick*==*/
+    //    document.getElementById('two').onclick=()=>{
+    //     alert("Switzerland");
+    //     } 
+
+    /*=======addEventListner()======*/
+
+    // document.getElementById("two").addEventListener('click',(eObj)=>{
+    //     console.log(eObj);
+    //     console.log(eObj.timeStamp);
+    // },false);
+
+
+
+    /*=================Event propagation==========*/
+
+    
+    /********** BUBLING:-
+    Here Bubling is happening ,('click',()=>{},false)=>where inner elememts executes first then the outer element*/
+//     document.getElementById("two").addEventListener('click',(eObj)=>{
+//        console.log("Switzerland clicked")
+//     },false);
+
+//     document.getElementById("images").addEventListener('click',(eObj)=>{
+//         console.log("inside the images");}
+//    ,false );
+
+
+       /*********** CAPTURING:-
+    Here Capturing is happening ,('click',()=>{},true)=>where outer elememts executes first then the inner element*/
+//     document.getElementById("two").addEventListener('click',(eObj)=>{
+//        console.log("Switzerland clicked")
+//     },true);
+
+//     document.getElementById("images").addEventListener('click',(eObj)=>{
+//         console.log("inside the images");}
+//    ,true );
+
+
+
+
+//REMEMBER:-If you want to stop the the propagtion use .stopPropagation(); method that you want to stop
+//     document.getElementById("two").addEventListener('click',(eObj)=>{
+//        console.log("Switzerland clicked");
+//        eObj.stopPropagation();
+//     },false);
+
+//     document.getElementById("images").addEventListener('click',(eObj)=>{
+//         console.log("inside the images");
+       
+//     }
+//    ,false );
+
+
+   /*===========Prevent Default=========*/
+
+//    document.getElementById("google").addEventListener('click',(event)=>{
+//     console.log("Google Click");
+//     event.preventDefault();
+//     event.stopPropagation();
+// },false);
+ 
+
+
+/********************MINI PROJECT*********************/
+document.querySelector("#images").addEventListener('click',(event)=>{
+
+    event.preventDefault();
+   if(event.target.tagName==='IMG'){
+    let removeImage=event.target.parentNode;
+     removeImage.remove();//==>Most used approach
+   }
+  
+
+    // removeImage.parentNode.removeChild(removeImage);//==>First you are accessing 'ul' then  remove its child which is 'li'
+
+},false);
+    
+
+
+
+
+
+/**
+ NOTES:-
+        1. In event listener we have there arguments to give('event-name',()=>{},true/flase)
+        but the third argument is known as event propagation.... by default it is false.So there is no need of that.
+        
+        Depricated approaches
+        -> attachEvent()
+        ->jQuery- on
+
+
+        2.Event Propagation-
+            There are two types of image propagation
+        Bubling-inner->outer
+        Capturing-outer->inner
+        
+
+ LEARN:-[1] types of event
+        [2] timeStamp
+        [3] defaultPrevented
+        [4]target
+        [5]srcElement
+        [6]toElement
+        [7]clientX,clientY
+        [8]screenX,screenY
+        [9]alt-key,ctrl-key,shift-key,keyCode*/
+
+</script>
+</html>
