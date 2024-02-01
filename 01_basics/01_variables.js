@@ -1,20 +1,21 @@
-const userId=28100122062;
-let userName="Anik Pal";
-var password="7267353";
-city="Kolkata";
+var password="7267353";   //var
+let userName="Anik Pal";  //let
+const userId=28100122062; //Constant
+city="Kolkata";          //With no keyword[BY DEFAULT IT IS 'var']
 let state;
 
-//userId=28100122063;  //===>It is not allowed as it is CONSTANT variable
+//userId=28100122063;  //==>We can't update/reassign as it is CONSTANT variable
+                       //   as it is defined by 'const' but can't declare it
 
-userName="Rohan";
+userName="Rohan";        //==>We can update/reassign the variable as it is defined 
+// let userName="Rohan"; //   by'let'but can't declare it.
+                      
 password="123456";
 city="Bengaluru";
 
 
 // console.log(userId);
 console.table([userId,userName,password,city,state]);
-
-
 /*==================NOTES=================== */
 /*
 
