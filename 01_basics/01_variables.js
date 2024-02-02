@@ -15,7 +15,7 @@ var password="JS404"; // by'var' and we can also redeclare it.
 
 city="Bengaluru";   //As it is used as  a var by default
 
-console.table([userId,userName,password,city,state]);
+console.log(`userId:-${userId},\nuserName:-${userName}\npassword:-${password}\ncity:-${city}\nstate:-${state}`);
 /*==================NOTES=================== */
 /*
 
