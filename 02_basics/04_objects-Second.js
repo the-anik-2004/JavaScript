@@ -58,12 +58,14 @@ const car={
 };
 
 const {brand} =car;
+const {price:cost}=car;
 const {model : m}=car;
 /*SYNTAX:-
      const{object_element : ele}=Object_name;
      console.log(ele) */
 
 console.log(brand);
+console.log(cost)
 console.log(m);
 
 /*++++++++++++++++JSON+++++++++++++*/
