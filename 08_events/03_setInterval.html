@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval</title>
+    <style>
+        body{
+        background-color: #212121;
+        color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>We are Humans...2</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <br>
+    <span></span>
+
+</body>
+<script>
+const mySpan=document.querySelector("span");
+   const myName=(str)=>{
+    console.log(str);
+    mySpan.innerHTML+=`${str}</br>`;
+   } 
+   
+let myInterval;
+document.querySelector('#start').addEventListener("click",()=>{
+    if(!myInterval){
+        myInterval=setInterval(myName,1000,"ANIK PAL");
+    }
+});
+
+document.querySelector('#stop').addEventListener("click",()=>{
+   clearInterval(myInterval);
+   myInterval=null;
+});
+
+
+// clearInterval(myInterval);
+    /*NOTES:-
+            *setInterval(handler,time_in_sec);
+                    In the place of handler you can put
+                an callback function or you can put the 
+                reference of that function....Known as 
+                "handler".
+
+            *clearInterval(reference_of_setTimeout);
+    */
+</script>
+</html>
