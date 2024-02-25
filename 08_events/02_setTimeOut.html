@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeOut</title>
+    <style>
+        body{
+        background-color: #212121;
+        color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>We are Humans</h1>
+    <button id="stpbtn">Stop</button>
+</body>
+<script>
+    
+    const devMsg=function(){
+        document.querySelector('h1').innerHTML="🎉We are Developers🎉";
+    };
+
+    const devMsgSTO=setTimeout(devMsg,2000);
+    document.querySelector('#stpbtn').addEventListener("click",(event)=>{
+        clearTimeout(devMsgSTO);
+        console.log("STOPPED MSG");
+    });
+
+    /*NOTES:-
+            *setTimeout(handler,time_in_sec);
+                    In the place of handler you can put
+                an callback function or you can put the 
+                reference of that function....Known as 
+                "handler".
+
+            *clearTimeout(reference_of_setTimeout);
+    */
+</script>
+</html>
