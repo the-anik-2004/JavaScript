@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML api request</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: #212121;
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            /* height: 10vh; */
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+        }
+        #ag{display: flex;
+        justify-content: space-evenly;}
+    </style>
+</head>
+<body>
+
+    <section>
+        <img src="" alt="user">
+        <article id="name">Anik Pal</article>
+      <div id="ag">
+        <p id="age">19</p>
+        <p id="gen">male</p>
+      </div>
+      <b id="address">india</b>
+
+    </section>
+    
+</body>
+<script>
+    const apiUrl='https://randomuser.me/api/';
+    const xmlHR= new XMLHttpRequest();
+    let picture;
+    let fname;
+    let lName;
+    let age;
+    let gender;
+    let city;
+    let country;
+    xmlHR.open('GET',apiUrl);
+    // console.log(xmlHR.readyState);
+
+    xmlHR.onreadystatechange=function(){
+        console.log(xmlHR.readyState)
+        if(xmlHR.readyState===4){
+            const data=JSON.parse(this.responseText);
+            city=data.results[0].location.city;
+            country=data.results[0].location.country;
+            fname=data.results[0].name.first;
+            lName=data.results[0].name.last;
+            picture=data.results[0].picture.medium;
+            age=data.results[0].dob.age;
+            gender=data.results[0].gender;
+
+
+            document.querySelector('img').src=picture;
+            document.querySelector('#name').innerHTML=`<i>${fname} &nbsp; ${lName}</i> `
+            document.querySelector('#age').innerHTML=`${age}`
+            document.querySelector('#gen').innerHTML=`${gender}`
+            document.querySelector('#address').innerHTML=`${city} [${country}]`
+        }
+    }
+    
+    xmlHR.send();
+  
+
+</script>
+</html>
