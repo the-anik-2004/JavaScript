@@ -13,3 +13,6 @@ function createUser(userName,email,password){
 }
 const chai=new createUser("chai","chai@fb.com","12334");
 console.log(chai);
+/**
+ * NOTE:-The call() method of Function instances calls this function with a given this value and arguments provided individually.
+ */
