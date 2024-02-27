@@ -37,8 +37,6 @@
     
 </body>
 <script>
-    const apiUrl='https://randomuser.me/api/';
-    const xmlHR= new XMLHttpRequest();
     let picture;
     let fname;
     let lName;
@@ -46,6 +44,8 @@
     let gender;
     let city;
     let country;
+    const apiUrl='https://randomuser.me/api/';
+    const xmlHR= new XMLHttpRequest();
     xmlHR.open('GET',apiUrl);
     // console.log(xmlHR.readyState);
 

@@ -128,3 +128,7 @@ getAllUsers();
 //     })
 // .then((res)=>{console.log(res.results[0]);})
 // .catch((error)=>{console.log("MyError:"+error);});
+
+/**
+ *THENABLE:-we used this .'then'() to return any data which is written by a 'then'chain to another .'then'() ...we  catch this return 'then''s value to its child 'then'
+ */
